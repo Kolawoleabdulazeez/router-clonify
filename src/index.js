@@ -4,9 +4,11 @@ import './index.css';
 // import App from './App';
 // import reportWebVitals from './reportWebVitals';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
-import Home from './Home'
-import Contact from './Contact'
-import About from './About'
+import Home from './Home';
+import Contact from './Contact';
+import About from './About';
+import Users from './Users';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,6 +18,7 @@ root.render(
         <Route path='/home' element={<Home/>}/>
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/about' element={<About/>}/>
+        <Route path='/users' element ={<Users/>}/>
 
       </Routes>
     </Router>

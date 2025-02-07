@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -163,4 +168,73 @@ color:white ;
   text-decoration: none;
   color: black;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.formContainer{
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.formGroup{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+}
+
+.formGroup input{
+  border-radius: 8px;
+  padding: 8px 10px;
+  border: 1px solid black;
+  margin-top: 4px;
+}
+
+.formContainer .btn{
+  padding: 10px 15px;
+  border-radius: 12px;
+  background-color: burlywood;
+  color: black;
+  transition: all ease-in-out 1s;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.formContainer .btn:hover{
+  background-color: brown;
+  color: white;
+}
+.formClass{
+  border: 1px solid black;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.userCard{
+  background-color: #f5f5f5;
+  display: flex;
+  gap: 1px;
+  flex-direction: column;
+  border-radius: 12px;
+  padding: 20px;
+  width: 260px;
+  border: 1px solid black;
+}
+
+.userInfo{
+  display: flex;
+  flex-direction: column;
+}
+
+.userInfo p:nth-child(1){
+  font-weight: bold;
+}
+
+textarea{
+  border: 1px solid black;
 }
