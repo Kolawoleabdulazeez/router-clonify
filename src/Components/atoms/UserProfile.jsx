@@ -11,7 +11,7 @@ export const UserProfile = ({userss}) => {
             <div className="sty ">
               <div
                 key={index}
-                className="flex justify-between border shadow-md rounded-lg p-4 w-100 items-center font-semibold"
+                className="flex gap-5 justify-between border shadow-md rounded-lg p-4 w-100 items-center font-semibold"
                 onClick={()=>{
                     navigate(`/users/${users.login}`)
                 }}
@@ -25,7 +25,7 @@ export const UserProfile = ({userss}) => {
                 <div>
                   <img
                     src={users.avatar_url}
-                    className="rounded-full"
+                    className="rounded-full" width={50}
                     alt="ghyt"
                   />
                 </div>

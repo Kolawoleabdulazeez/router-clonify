@@ -1,14 +1,22 @@
+import axios from 'axios';
 import React, {useState}from 'react'
 import { useParams } from 'react-router-dom';
+import { Loading } from '../Components/atoms/Loading';
+import { UserProfile } from '../Components/atoms/UserProfile';
 
-export const SingleUser = () => {
+
+export const SingleUser = (
+  users,
+  loading,
+  setLoading
+) => {
     const{id} = useParams();
     const [user, setUser] = useState([]);
 
     const getUser = async () => {
         setLoading(true);
-// `https:randomuser.me/api/? results=12`}`
-try {
+// github api
+ try {
 
     const response = await axios.get(`https://api.github.com/users`);
           if (response.data.length > 0) {
@@ -22,7 +30,12 @@ try {
     console.log(`This is my error ${error}`);
   }
 };
-    }
+  return(
+    <div>
+      Hello
+    </div>
+  )
+    } 
  
   
  

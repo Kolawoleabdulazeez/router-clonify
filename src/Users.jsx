@@ -13,8 +13,11 @@ const Users = () => {
 // `https:randomuser.me/api/? results=12`}`
 try {
 
-      const response = await axios.get(`https://api.github.com/users`);
-            if (response.data.length > 0) {
+      const response = await axios.get(`https://api.github.com/users`, {headers:{
+        'Authorization':
+      }});
+          Header     
+      if (response.data.length > 0) {
         setUser(response.data);
         setLoading(false);
       }
@@ -32,7 +35,7 @@ try {
   return (
     <div>
       <Navbar />
-      <label htmlFor="select" className="block my-2 mx-2">Select Gender </label>
+       <label htmlFor="select" className="block my-2 mx-2">Select Gender </label>
       <select onChange={(e)=>{
         setGender(e.target.value)
       }} className="w-fit my-2 border p-3 rounded-lg mx-2">
