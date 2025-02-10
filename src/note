@@ -13,9 +13,9 @@ const Users = () => {
 // `https:randomuser.me/api/? results=12`}`
 try {
 
-      const response = await axios.get(`https://api.github.com/users`);
-            if (response.data.length > 0) {
-        setUser(response.data);
+      const response = await axios.get(`https://randomuser.me/api/?results=12${gender==='all'? '':`&gender=${gender}`}`);
+            if (response.data.results.length > 0) {
+        setUser(response.data.results);
         setLoading(false);
       }
 

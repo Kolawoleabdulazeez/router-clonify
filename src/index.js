@@ -8,6 +8,7 @@ import Home from './Home';
 import Contact from './Contact';
 import About from './About';
 import Users from './Users';
+import { SingleUser } from './Pages/SingleUser';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -19,6 +20,7 @@ root.render(
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/users' element ={<Users/>}/>
+        <Route path='/users/:id' element={<SingleUser/>} />
 
       </Routes>
     </Router>
