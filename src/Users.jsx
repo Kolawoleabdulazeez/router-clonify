@@ -8,15 +8,18 @@ const Users = () => {
   const [user, setUser] = useState([]);
   const [loading, setLoading] = useState(false);
   const[gender, setGender] = useState("all")
+  const GITHUBTOKEN = "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"
   const getUser = async () => {
           setLoading(true);
 // `https:randomuser.me/api/? results=12`}`
 try {
 
-      const response = await axios.get(`https://api.github.com/users`, {headers:{
-        'Authorization':
-      }});
-          Header     
+      const response = await axios.get(`https://api.github.com/users` , {
+        headers: {
+          Authorization: `token ${GITHUBTOKEN}`
+        },
+      });
+               
       if (response.data.length > 0) {
         setUser(response.data);
         setLoading(false);
@@ -27,11 +30,14 @@ try {
     } catch (error) {
       console.log(`This is my error ${error}`);
     }
+    finally{
+      setLoading(false)
+    }
   };
 
   useEffect(() => {
     getUser();
-  }, [gender]);
+  }, []);
   return (
     <div>
       <Navbar />

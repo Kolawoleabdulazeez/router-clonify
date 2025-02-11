@@ -238,3 +238,12 @@ color:white ;
 textarea{
   border: 1px solid black;
 }
+
+.SingleUser{
+  border: 1px solid black;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+  box-shadow:5px 5px 5px rgb(105, 105, 105);;
+}
